@@ -7,7 +7,7 @@
 # Hᴏᴡ Tᴏ Hᴏꜱᴛ
 ᴛʜᴇ ᴇᴀꜱɪᴇꜱᴛ ᴡᴀʏ ᴛᴏ ᴅᴇᴘʟᴏʏ ᴛʜɪꜱ ʙᴏᴛ
 
-[![DEPLOY HERE](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Titan-OP/TITAN-VC-BOT/blob/master)
+[![DEPLOY HERE](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Titan-OP/TITAN-VC-OP/blob/master)
 
 ---------
 
