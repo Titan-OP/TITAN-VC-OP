@@ -9,7 +9,6 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
     & ~ filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgUAAx0CQ8QTWQACCD9gpSGtPso-JueMmC6tCptx2H6VjAACngEAAmpqaFeIQbV46r_aFh8E")
     await message.reply_text(
         f"""<b>Hɪ {message.from_user.first_name}!
 \nɪ ᴀᴍ [𝐓𝐈𝐓𝐀𝐍 𝐕𝐂 𝐁𝐎𝐓](https://telegra.ph/file/9221dea55a8e847788d92.jpg)
@@ -33,7 +32,7 @@ async def start_(client: Client, message: Message):
                         "💬Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ💬", url="https://t.me/TITANX_CHAT"
                     ),
                     InlineKeyboardButton(
-                        "🎭SᴛꞮᴄᴋᴇƦꜱ🎭", callback_data="help_back"
+                        "🎭SᴛꞮᴄᴋᴇƦꜱ🎭", "
                     ),
                     InlineKeyboardButton(
                         "👑Oᴡɴᴇʀ👑", url="http://t.me/DARK_DEVIL_OP"
@@ -55,20 +54,20 @@ async def start_(client: Client, message: Message):
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "💁🏻‍♂️ Do you want to search for a YouTube video?",
+        "ʜᴇʏᴀ! ɪ ᴀᴍ ᴛɪᴛᴀɴ ᴠᴄ ʙᴏᴛ, ɪ ᴄᴀɴ ᴘʟᴀʏ ꜱᴏɴɢ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴠᴄ.
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💬SUPPORT CHAT💬", url="https://t.me/TITANX_CHAT"
+                        "💬Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ💬", url="https://t.me/TITANX_CHAT"
                     )
                 ],    
                 [    
                     InlineKeyboardButton(
-                        "Yes✔️", switch_inline_query_current_chat=""
+                        "👑Cʀᴇᴀᴛᴏʀ👑", url="https://t.me/DARK_DEVIL_OP""
                     ),
                     InlineKeyboardButton(
-                        "No❌", callback_data="close"
+                        "💫Aʟꜱᴏ Cʜᴇᴄᴋ💫", url="https://t.me/Titan1v0_bot"
                     )
                 ]
             ]
@@ -82,31 +81,32 @@ async def start(client: Client, message: Message):
 )
 async def help(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>Hi {message.from_user.first_name}!
+        f"""<b>Hɪ {message.from_user.first_name}!
+\n➟ Uꜱᴇʀ Cᴏᴍᴍᴀᴅꜱ
 \n/play <song name> - play song you requested
-/dplay <song name> - play song you requested via deezer
-/splay <song name> - play song you requested via jio saavn
-/playlist - Show now playing list
-/current - Show now playing
-/song <song name> - download songs you want quickly
-/search <query> - search videos on youtube with details
-/deezer <song name> - download songs you want quickly via deezer
-/saavn <song name> - download songs you want quickly via saavn
-/video <song name> - download videos you want quickly
-\n*Admins only*
-/player - open music player settings panel
-/pause - pause song play
-/resume - resume song play
-/skip - play next song
-/end - stop music play
-/userbotjoin - invite assistant to your chat
-/admincache - Refresh admin list
+\n/dplay <song name> - play song you requested via deezer
+\n/splay <song name> - play song you requested via jio saavn
+\n/playlist - Show now playing list
+\n/current - Show now playing
+\n/song <song name> - download songs you want quickly
+\n/search <query> - search videos on youtube with details
+\n/deezer <song name> - download songs you want quickly via deezer
+\n/saavn <song name> - download songs you want quickly via saavn
+\n/video <song name> - download videos you want quickly
+\n\n➟ Aᴅᴍɪɴꜱ Cᴏᴍᴍᴀᴅꜱ
+\n/player - open music player settings panel
+\n/pause - pause song play
+\n/resume - resume song play
+\n/skip - play next song
+\n/end - stop music play
+\n/userbotjoin - invite assistant to your chat
+\n/admincache - Refresh admin list
  </b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💬SUPPORT CHAT💬", url="https://t.me/TITANX_CHAT"
+                        "💬Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ💬", url="https://t.me/TITANX_CHAT"
                     )
                 ]
             ]
