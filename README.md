@@ -1,14 +1,21 @@
-# camilaMusic Telegram Bot - This is a pyrogram bot based on pytgcalls for playing songs or audio files in Telegram group voice chat
-[![camila](https://telegra.ph/file/87f281fe90bb91d3d6193.jpg)](https://t.me/camila_support)
+# Tɪᴛᴀɴ Vᴄ Bᴏᴛ 
+ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ - ᴛʜɪꜱ ɪꜱ ᴀ ᴘʏʀᴏɢʀᴀᴍ ʙᴏᴛ ʙᴀꜱᴇᴅ ᴏɴ ᴘʏᴛɢᴄᴀʟʟꜱ ꜰᴏʀ ᴘʟᴀʏɪɴɢ ꜱᴏɴɢꜱ ᴏʀ ᴀᴜᴅɪᴏ ꜰɪʟᴇꜱ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴘ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ.
+[![TITAN](https://telegra.ph/file/53757a64c5c4bcfefd0c4.jpg)](https://t.me/TITANX_CHAT)
 
+---------
 
-# How To Host
-The easiest way to deploy this Bot
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/war-legend/camilaVcBot"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+# Hᴏᴡ Tᴏ Hᴏꜱᴛ
+ᴛʜᴇ ᴇᴀꜱɪᴇꜱᴛ ᴡᴀʏ ᴛᴏ ᴅᴇᴘʟᴏʏ ᴛʜɪꜱ ʙᴏᴛ
 
-Get STRING_NAME from here:
+[![DEPLOY HERE](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Titan-OP/TITAN-VC-BOT/blob/master)
 
-[![GenerateString](https://img.shields.io/badge/repl.it-generateString-bluegreen)](https://t.me/PyroStringSessionRobot)
+---------
+
+# Gᴇᴛ STRING_NAME Fʀᴏᴍ Hᴇʀᴇ:
+
+[![GenerateString](https://img.shields.io/badge/repl.it-generateString-bluegreen)](https://t.me/TechnoPyroxD_bot)
+
+---------
 
 ### Mandatory Vars.
 
@@ -21,7 +28,7 @@ Get STRING_NAME from here:
 
 
 
-
+----------
 
 
 
@@ -48,5 +55,5 @@ Get STRING_NAME from here:
 - `/userbotleave` - remove assistant from your chat
 - `/admincache` - Refresh admin list
 
-#[Need Help Join support](https://t.me/warbotZchat)
+# Need Help Join [Support](https://t.me/TITANX_CHAT)
 
