@@ -1,9 +1,9 @@
 {
-    "name": "Camila ᴍᴜꜱɪᴄ",
-    "logo": "https://telegra.ph/file/f204b7dd01d9c30573e25.jpg",
+    "name": "ᴛɪᴛᴀɴ ᴠᴄ ʙᴏᴛ",
+    "logo": "https://telegra.ph/file/53757a64c5c4bcfefd0c4.jpg",
     "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
     "keywords": ["music", "voicechat", "telegram"],
-    "repository": "https://github.com/war-legend/camilaVcBot",
+    "repository": "https://github.com/Titan-OP/TITAN-VC-OP",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
