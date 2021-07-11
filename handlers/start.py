@@ -11,12 +11,12 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgUAAx0CQ8QTWQACCD9gpSGtPso-JueMmC6tCptx2H6VjAACngEAAmpqaFeIQbV46r_aFh8E")
     await message.reply_text(
-        f"""<b>Hi {message.from_user.first_name}!
-\nI can play music in your group's voice chat
+        f"""<b>Hɪ {message.from_user.first_name}!
+\nɪ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ'ꜱ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ
 
-Music Assistant - @camilaowner
-\nTo add in your group contact us at @camila_Support or do /userbotjoin
-\nHit /help list of available commands.
+Mᴜꜱɪᴄ Aꜱꜱɪꜱᴛᴀɴᴛ - @TITANVC_ASSISTANT
+\nᴛᴏ ᴀᴅᴅ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴄᴏɴᴛᴀᴄᴛ ᴜꜱ ᴀᴛ @TITANX_CHAT
+\nʜɪᴛ /help ʟɪꜱᴛ ᴏꜰ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ.
  </b>""",
       
        
@@ -24,23 +24,23 @@ Music Assistant - @camilaowner
             [
                 [
                     InlineKeyboardButton(
-                      "✨CamilaAssistant", url="https://t.me/camilaowner",
+                      "✨TITAN VC ASSISTANT✨", url="https://t.me/TITANVC_ASSISTANT",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Help Group", url="https://t.me/camila_support"
+                        "💬SUPPORT CHAT💬", url="https://t.me/TITANX_CHAT"
                     ),
                     InlineKeyboardButton(
-                        "stickers💖", url="https://t.me/stickersbag"
+                        "🎭STICKERS🎭", url="https://t.me/stickersbag"
                     ),
                     InlineKeyboardButton(
-                        "✨GitHub✨", url="http://www.github.com/War-Legend/camilavcbot"
+                        "👑Owner👑", url="http://www.github.com/Titan-OP/TITAN-VC-OP"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "➕ Add To Your Group ➕", url="https://t.me/camillaMusicbot?startgroup=true"
+                        "💫 Add To Your Group 💫", url="https://t.me/VCSong21_bot?startgroup=true"
                     ) 
                 ]
             ]
@@ -59,15 +59,15 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Support Group  ", url="https://t.me/camila_support"
+                        "💬SUPPORT CHAT💬", url="https://t.me/TITANX_CHAT"
                     )
                 ],    
                 [    
                     InlineKeyboardButton(
-                        "✅ Yes", switch_inline_query_current_chat=""
+                        "Yes✔️", switch_inline_query_current_chat=""
                     ),
                     InlineKeyboardButton(
-                        "No ❌", callback_data="close"
+                        "No❌", callback_data="close"
                     )
                 ]
             ]
@@ -105,7 +105,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Need Help❓", url="https://t.me/camila_Support"
+                        "💬SUPPORT CHAT💬", url="https://t.me/TITANX_CHAT"
                     )
                 ]
             ]
