@@ -12,11 +12,12 @@ async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgUAAx0CQ8QTWQACCD9gpSGtPso-JueMmC6tCptx2H6VjAACngEAAmpqaFeIQbV46r_aFh8E")
     await message.reply_text(
         f"""<b>Hɪ {message.from_user.first_name}!
-\nɪ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ'ꜱ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ
+\nɪ ᴀᴍ [𝐓𝐈𝐓𝐀𝐍 𝐕𝐂 𝐁𝐎𝐓](https://telegra.ph/file/9221dea55a8e847788d92.jpg)
+ɪ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ'ꜱ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ
 
-Mᴜꜱɪᴄ Aꜱꜱɪꜱᴛᴀɴᴛ - @TITANVC_ASSISTANT
-\nᴛᴏ ᴀᴅᴅ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴄᴏɴᴛᴀᴄᴛ ᴜꜱ ᴀᴛ @TITANX_CHAT
-\nʜɪᴛ /help ʟɪꜱᴛ ᴏꜰ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ.
+🔹Mᴜꜱɪᴄ Aꜱꜱɪꜱᴛᴀɴᴛ🔹:- [Tɪᴛᴀɴ Vᴄ Aꜱꜱɪꜱᴛᴀɴᴛ](https://t.me/TITANVC_ASSISTANT)
+\nᴛᴏ ᴀᴅᴅ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴄᴏɴᴛᴀᴄᴛ ᴜꜱ ᴀᴛ [Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ](https://t.me/TITANX_CHAT)
+\nʜɪᴛ /help ᴛᴏ ɢᴇᴛ ʟɪꜱᴛ ᴏꜰ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ.
  </b>""",
       
        
@@ -24,23 +25,23 @@ Mᴜꜱɪᴄ Aꜱꜱɪꜱᴛᴀɴᴛ - @TITANVC_ASSISTANT
             [
                 [
                     InlineKeyboardButton(
-                      "✨TITAN VC ASSISTANT✨", url="https://t.me/TITANVC_ASSISTANT",
+                      "✨Tɪᴛᴀɴ Vᴄ Aꜱꜱɪꜱᴛᴀɴᴛ✨", url="https://t.me/TITANVC_ASSISTANT",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬SUPPORT CHAT💬", url="https://t.me/TITANX_CHAT"
+                        "💬Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ💬", url="https://t.me/TITANX_CHAT"
                     ),
                     InlineKeyboardButton(
-                        "🎭STICKERS🎭", url="https://t.me/stickersbag"
+                        "🎭Sᴛɪᴄᴋᴇʀꜱ🎭", url="https://t.me/stickersbag"
                     ),
                     InlineKeyboardButton(
-                        "👑Owner👑", url="http://www.github.com/Titan-OP/TITAN-VC-OP"
+                        "👑Oᴡɴᴇʀ👑", url="http://t.me/DARK_DEVIL_OP"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💫 Add To Your Group 💫", url="https://t.me/VCSong21_bot?startgroup=true"
+                        "💫 Aᴅᴅ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 💫", url="https://t.me/VCSong21_bot?startgroup=true"
                     ) 
                 ]
             ]
