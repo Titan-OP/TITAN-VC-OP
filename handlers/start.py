@@ -33,7 +33,7 @@ async def start_(client: Client, message: Message):
                         "💬Sᴜᴘᴘᴏʀᴛ Cʜᴀᴛ💬", url="https://t.me/TITANX_CHAT"
                     ),
                     InlineKeyboardButton(
-                        "🎭Sᴛɪᴄᴋᴇʀꜱ🎭", url="https://t.me/stickersbag"
+                        "🎭SᴛꞮᴄᴋᴇƦꜱ🎭", callback_data="help_back"
                     ),
                     InlineKeyboardButton(
                         "👑Oᴡɴᴇʀ👑", url="http://t.me/DARK_DEVIL_OP"
