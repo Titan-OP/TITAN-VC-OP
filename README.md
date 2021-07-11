@@ -13,7 +13,7 @@
 
 # Gᴇᴛ STRING_NAME Fʀᴏᴍ Hᴇʀᴇ:
 
-[![GenerateString](https://img.shields.io/badge/PYRO-STRING GENERATOR-bluegreen)](https://t.me/TechnoPyroxD_bot)
+[![GenerateString](https://img.shields.io/badge/pyro-string-generator-bluegreen)](https://t.me/TechnoPyroxD_bot)
 
 ---------
 
