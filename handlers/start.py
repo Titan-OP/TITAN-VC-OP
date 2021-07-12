@@ -55,7 +55,7 @@ async def start_(client: Client, message: Message):
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "Heya! I am TITAN MUSIC BOT, I CAN PLAY MUSIC IN UR GROUP'S VC.",
+        "💁🏻‍♂️ Do you want to search for a YouTube video?",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -65,10 +65,10 @@ async def start(client: Client, message: Message):
                 ],    
                 [    
                     InlineKeyboardButton(
-                        "👑Cʀᴇᴀᴛᴏʀ👑", url="https://t.me/DARK_DEVIL_OP""
+                        "👑Cʀᴇᴀᴛᴏʀ👑", url="https://t.me/DARK_DEVIL_OP"
                     ),
                     InlineKeyboardButton(
-                        "💫Aʟꜱᴏ Cʜᴇᴄᴋ💫", url="https://t.me/Titan1v0_bot"
+                        "Nᴏ ❌", callback_data="close"
                     )
                 ]
             ]
