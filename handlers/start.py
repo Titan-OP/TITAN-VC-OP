@@ -54,7 +54,7 @@ async def start_(client: Client, message: Message):
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "ʜᴇʏᴀ! ɪ ᴀᴍ ᴛɪᴛᴀɴ ᴠᴄ ʙᴏᴛ, ɪ ᴄᴀɴ ᴘʟᴀʏ ꜱᴏɴɢ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴠᴄ.
+        "ʜᴇʏᴀ! ɪ ᴀᴍ ᴛɪᴛᴀɴ ᴠᴄ ʙᴏᴛ, ɪ ᴄᴀɴ ᴘʟᴀʏ ꜱᴏɴɢ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴠᴄ."
         reply_markup=InlineKeyboardMarkup(
             [
                 [
