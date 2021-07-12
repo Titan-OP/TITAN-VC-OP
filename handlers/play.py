@@ -130,19 +130,19 @@ async def playlist(client, message):
     global que
     queue = que.get(message.chat.id)
     if not queue:
-        await message.reply_text('Player is idle')
+        await message.reply_text('Pʟᴀʏᴇʀ ɪꜱ Iᴅʟᴇ')
     temp = []
     for t in queue:
         temp.append(t)
     now_playing = temp[0][0]
     by = temp[0][1].mention(style='md')
-    msg = "**Now Playing** in {}".format(message.chat.title)
+    msg = "**Nᴏᴡ Pʟᴀʏɪɴɢ** ɪɴ {}".format(message.chat.title)
     msg += "\n- "+ now_playing
     msg += "\n- Req by "+by
     temp.pop(0)
     if temp:
         msg += '\n\n'
-        msg += '**Queue**'
+        msg += '**Qᴜᴇᴜᴇ**'
         for song in temp:
             name = song[0]
             usr = song[1].mention(style='md')
@@ -150,18 +150,18 @@ async def playlist(client, message):
             msg += f'\n- Req by {usr}\n'
     await message.reply_text(msg)       
     
-# ============================= Settings =========================================
+# =============================> Settings <=========================================
 
 def updated_stats(chat, queue, vol=100):
     if chat.id in callsmusic.pytgcalls.active_calls:
     #if chat.id in active_chats:
-        stats = 'Settings of **{}**'.format(chat.title)
+        stats = 'Sᴇᴛᴛɪɴɢꜱ ᴏꜰ **{}**'.format(chat.title)
         if len(que) > 0:
             stats += '\n\n'
-            stats += 'Volume : {}%\n'.format(vol)
-            stats += 'Songs in queue : `{}`\n'.format(len(que))
-            stats += 'Now Playing : **{}**\n'.format(queue[0][0])
-            stats += 'Requested by : {}'.format(queue[0][1].mention)
+            stats += 'Vᴏʟᴜᴍᴇ : {}%\n'.format(vol)
+            stats += 'Sᴏɴɢꜱ ɪɴ Qᴜᴇᴜᴇ : `{}`\n'.format(len(que))
+            stats += 'Nᴏᴡ Pʟᴀʏɪɴɢ : **{}**\n'.format(queue[0][0])
+            stats += 'RᴇQᴜᴇꜱᴛᴇᴅ Bʏ : {}'.format(queue[0][1].mention)
     else:
         stats = None
     return stats
@@ -175,17 +175,17 @@ def r_ply(type_):
         [
             [
                 InlineKeyboardButton('⏹', 'leave'),
-                InlineKeyboardButton('⏸', 'puse'),
-                InlineKeyboardButton('▶️', 'resume'),
+                InlineKeyboardButton('▶️', 'puse'),
+                InlineKeyboardButton('⏸', 'resume'),
                 InlineKeyboardButton('⏭', 'skip')
                 
             ],
             [
-                InlineKeyboardButton('Playlist 📖', 'playlist'),
+                InlineKeyboardButton('Pʟᴀʏʟɪꜱᴛ 📖', 'playlist'),
                 
             ],
             [       
-                InlineKeyboardButton("❌ Close",'cls')
+                InlineKeyboardButton("Cʟᴏꜱᴇ ❌",'cls')
             ]        
         ]
     )
@@ -202,7 +202,7 @@ async def ee(client, message):
     if stats:
         await message.reply(stats)              
     else:
-        await message.reply('No VC instances running in this chat')
+        await message.reply('Nᴏ VC Iɴꜱᴛᴀɴᴄᴇꜱ Rᴜɴɴɪɴɢ ɪɴ Tʜɪꜱ Cʜᴀᴛ')
 
 @Client.on_message(
     filters.command("player")
@@ -218,12 +218,12 @@ async def settings(client, message):
     stats = updated_stats(message.chat, queue)
     if stats:
         if playing:
-            await message.reply(stats, reply_markup=r_ply('pause'))
+            await message.reply(stats, reply_markup=r_ply('Pᴀᴜꜱᴇ'))
             
         else:
-            await message.reply(stats, reply_markup=r_ply('play'))
+            await message.reply(stats, reply_markup=r_ply('Pʟᴀʏ'))
     else:
-        await message.reply('No VC instances running in this chat')
+        await message.reply('Nᴏ VC Iɴꜱᴛᴀɴᴄᴇꜱ Rᴜɴɴɪɴɢ ɪɴ Tʜɪꜱ Cʜᴀᴛ')
 
 @Client.on_callback_query(filters.regex(pattern=r'^(playlist)$'))
 async def p_cb(b, cb):
@@ -236,19 +236,19 @@ async def p_cb(b, cb):
     if type_ == 'playlist':           
         queue = que.get(cb.message.chat.id)
         if not queue:   
-            await cb.message.edit('Player is idle')
+            await cb.message.edit('Pʟᴀʏᴇʀ ɪꜱ Iᴅʟᴇ')
         temp = []
         for t in queue:
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style='md')
-        msg = "**Now Playing** in {}".format(cb.message.chat.title)
+        msg = "**Nᴏᴡ Pʟᴀʏɪɴɢ** in {}".format(cb.message.chat.title)
         msg += "\n- "+ now_playing
         msg += "\n- Req by "+by
         temp.pop(0)
         if temp:
              msg += '\n\n'
-             msg += '**Queue**'
+             msg += '**Qᴜᴇᴜᴇ**'
              for song in temp:
                  name = song[0]
                  usr = song[1].mention(style='md')
@@ -276,7 +276,7 @@ async def m_cb(b, cb):
         else:
             callsmusic.pytgcalls.pause_stream(chat_id)
             
-            await cb.answer('Music Paused!')
+            await cb.answer('Mᴜꜱɪᴄ Pᴀᴜꜱᴇᴅ!')
             await cb.message.edit(updated_stats(m_chat, qeue), reply_markup=r_ply('play'))
                 
 
@@ -289,26 +289,26 @@ async def m_cb(b, cb):
                 await cb.answer('Chat is not connected!', show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chat_id)
-            await cb.answer('Music Resumed!')
+            await cb.answer('Mᴜꜱɪᴄ Rᴇꜱᴜᴍᴇᴅ!')
             await cb.message.edit(updated_stats(m_chat, qeue), reply_markup=r_ply('pause'))
                      
 
     elif type_ == 'playlist':
         queue = que.get(cb.message.chat.id)
         if not queue:   
-            await cb.message.edit('Player is idle')
+            await cb.message.edit('Pʟᴀʏᴇʀ ɪꜱ Iᴅʟᴇ')
         temp = []
         for t in queue:
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style='md')
-        msg = "**Now Playing** in {}".format(cb.message.chat.title)
+        msg = "**Nᴏᴡ Pʟᴀʏɪɴɢ** in {}".format(cb.message.chat.title)
         msg += "\n- "+ now_playing
         msg += "\n- Req by "+by
         temp.pop(0)
         if temp:
              msg += '\n\n'
-             msg += '**Queue**'
+             msg += '**Qᴜᴇᴜᴇ**'
              for song in temp:
                  name = song[0]
                  usr = song[1].mention(style='md')
@@ -325,7 +325,7 @@ async def m_cb(b, cb):
                 await cb.answer('Chat is not connected or already playng', show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chat_id)
-            await cb.answer('Music Resumed!')     
+            await cb.answer('Mᴜꜱɪᴄ Rᴇꜱᴜᴍᴇᴅ!')     
     elif type_ == 'puse':         
         if (
             chat_id not in callsmusic.pytgcalls.active_calls
@@ -336,9 +336,9 @@ async def m_cb(b, cb):
         else:
             callsmusic.pytgcalls.pause_stream(chat_id)
             
-            await cb.answer('Music Paused!')
+            await cb.answer('Mᴜꜱɪᴄ Pᴀᴜꜱᴇᴅ!')
     elif type_ == 'cls':          
-        await cb.answer('Closed menu')
+        await cb.answer('Cʟᴏꜱᴇᴅ Mᴇɴᴜ')
         await cb.message.delete()       
 
     elif type_ == 'menu':  
@@ -348,17 +348,17 @@ async def m_cb(b, cb):
             [
                 [
                     InlineKeyboardButton('⏹', 'leave'),
-                    InlineKeyboardButton('⏸', 'puse'),
-                    InlineKeyboardButton('▶️', 'resume'),
+                    InlineKeyboardButton('▶️', 'puse'),
+                    InlineKeyboardButton('⏸', 'resume'),
                     InlineKeyboardButton('⏭', 'skip')
                 
                 ],
                 [
-                    InlineKeyboardButton('Playlist 📖', 'playlist'),
+                    InlineKeyboardButton('Pʟᴀʏʟɪꜱᴛ 📖', 'playlist'),
                 
                 ],
                 [       
-                    InlineKeyboardButton("❌ Close",'cls')
+                    InlineKeyboardButton("Cʟᴏꜱᴇ ❌",'cls')
                 ]        
             ]
         )
@@ -374,15 +374,15 @@ async def m_cb(b, cb):
             if callsmusic.queues.is_empty(chat_id):
                 callsmusic.pytgcalls.leave_group_call(chat_id)
                 
-                await cb.message.edit('- No More Playlist..\n- Leaving VC!')
+                await cb.message.edit('- Nᴏ Mᴏʀᴇ Pʟᴀʏʟɪꜱᴛ..\n- Lᴇᴀᴠɪɴɢ VC!')
             else:
                 callsmusic.pytgcalls.change_stream(
                     chat_id,
                     callsmusic.queues.get(chat_id)["file"]
                 )
-                await cb.answer('Skipped')
+                await cb.answer('Sᴋɪᴘᴘᴇᴅ')
                 await cb.message.edit((m_chat, qeue), reply_markup=r_ply(the_data))
-                await cb.message.reply_text(f'- Skipped track\n- Now Playing **{qeue[0][0]}**')
+                await cb.message.reply_text(f'- Sᴋɪᴘᴘᴇᴅ Tʀᴀᴄᴋ\n- Nᴏᴡ Pʟᴀʏɪɴɢ **{qeue[0][0]}**')
 
     else:      
         if chat_id in callsmusic.pytgcalls.active_calls:
@@ -392,21 +392,21 @@ async def m_cb(b, cb):
                 pass
 
             callsmusic.pytgcalls.leave_group_call(chat_id)
-            await cb.message.edit('Successfully Left the Chat!')
+            await cb.message.edit('Sᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ Lᴇꜰᴛ Tʜᴇ Cʜᴀᴛ!')
         else:
             await cb.answer('Chat is not connected!', show_alert=True)
 
 @Client.on_message(command("play") & other_filters)
 async def play(_, message: Message):
     global que
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("🔄 **Pʀᴏᴄᴇꜱꜱɪɴɢ**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "@camilaowner"
+        user.first_name =  "@TITANVC_ASSISTANT"
     usar = user
     wew = usar.id
     try:
@@ -427,7 +427,7 @@ async def play(_, message: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message.chat.id,"I joined this group for playing music in VC")
                               await lel.edit(
-                                  "<b>@camilaowner userbot joined your chat</b>",
+                                  "<b>@TITANVC_ASSISTANT userbot joined your chat</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -436,7 +436,7 @@ async def play(_, message: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @camilaowner to your Group and try again</b>",
+                                  "\n\nOr manually add @TITANVC_ASSISTANT to your Group and try again</b>",
                               )
                               pass
     try:
@@ -444,12 +444,12 @@ async def play(_, message: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> @camilaowner Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
+            f"<i> @TITANVC_ASSISTANT Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
         )
         return     
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
-    await lel.edit("🔎 **Finding**")
+    await lel.edit("🔎 **Fɪɴᴅɪɴɢ**")
     sender_id = message.from_user.id
     user_id = message.from_user.id
     sender_name = message.from_user.first_name
@@ -460,7 +460,7 @@ async def play(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    await lel.edit("🎵 **Processing**")
+    await lel.edit("🎵 **Pʀᴏᴄᴇꜱꜱɪɴɢ**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -484,19 +484,19 @@ async def play(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton('📖 Playlist', callback_data='playlist'),
-                    InlineKeyboardButton('Menu ⏯ ', callback_data='menu')
+                    InlineKeyboardButton('Pʟᴀʏʟɪꜱᴛ 📖', callback_data='playlist'),
+                    InlineKeyboardButton('Mᴇɴᴜ ⏯ ', callback_data='menu')
                 
                 ],                     
                 [
                     InlineKeyboardButton(
-                        text="Watch On YouTube 🎬",
+                        text="Wᴀᴛᴄʜ ᴏɴ Yᴏᴜᴛᴜʙᴇ 🎬",
                         url=f"{url}")
 
                 ],
                 [       
                     InlineKeyboardButton(
-                        text="❌ Close",
+                        text="Cʟᴏꜱᴇ ❌",
                         callback_data='cls')
 
                 ]                             
@@ -516,7 +516,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
         photo="final.png", 
-        caption=f"#⃣ Your requested song **queued** at position {position}!",
+        caption=f"#⃣ Yᴏᴜʀ RᴇQᴜᴇꜱᴛᴇᴅ Sᴏɴɢ **Qᴜᴇᴜᴇᴅ** ᴀᴛ Pᴏꜱɪᴛɪᴏɴ {position}!",
         reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
@@ -533,7 +533,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="✯Camila ᴍᴜꜱɪᴄ✯▶️ **Playing** here the song requested by {} 😜".format(
+        caption="✯Tɪᴛᴀɴ Mᴜꜱɪᴄ✯▶️ **Pʟᴀʏɪɴɢ** ʜᴇʀᴇ ᴛʜᴇ ꜱᴏɴɢ ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ {} ✨".format(
         message.from_user.mention()
         ),
     )
@@ -548,13 +548,13 @@ async def play(_, message: Message):
 )
 async def deezer(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **Pʀᴏᴄᴇꜱꜱɪɴɢ**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "camilaowner"
+        user.first_name =  "TITANVC_ASSISTANT"
     usar = user
     wew = usar.id
     try:
@@ -575,7 +575,7 @@ async def deezer(client: Client, message_: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message_.chat.id,"I joined this group for playing music in VC")
                               await lel.edit(
-                                  "<b>@camilaowner userbot joined your chat</b>",
+                                  "<b>@TITANVC_ASSISTANT userbot joined your chat</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -584,7 +584,7 @@ async def deezer(client: Client, message_: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @camilaowner to your Group and try again</b>",
+                                  "\n\nOr manually add @TITANVC_ASSISTANT to your Group and try again</b>",
                               )
                               pass
     try:
@@ -592,7 +592,7 @@ async def deezer(client: Client, message_: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>Looks like @camilaowner Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
+            f"<i>Looks like @TITANVC_ASSISTANT Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
         )
         return                            
     requested_by = message_.from_user.first_name   
@@ -600,7 +600,7 @@ async def deezer(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     queryy = text[1]
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{queryy}` on deezer")
+    await res.edit(f"Sᴇᴀʀᴄʜɪɴɢ 👀 ꜰᴏʀ `{queryy}` ᴏɴ Dᴇᴇᴢᴇʀ")
     try:
         arq = ARQ("https://thearq.tech")
         r = await arq.deezer(query=queryy, limit=1)
@@ -618,18 +618,18 @@ async def deezer(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
          [   
              [
-                 InlineKeyboardButton('📖 Playlist', callback_data='playlist'),
-                 InlineKeyboardButton('Menu ⏯ ', callback_data='menu')     
+                 InlineKeyboardButton('Pʟᴀʏʟɪꜱᴛ 📖', callback_data='playlist'),
+                 InlineKeyboardButton('Mᴇɴᴜ ⏯ ', callback_data='menu')     
              ],                     
              [
                  InlineKeyboardButton(
-                     text="Listen On Deezer 🎬",
+                     text="Lɪꜱᴛᴇɴ ᴏɴ Dᴇᴇᴢᴇʀ 🎬",
                      url=f"{url}")
 
              ],
              [       
                  InlineKeyboardButton(
-                     text="❌ Close",
+                     text="Cʟᴏꜱᴇ ❌",
                      callback_data='cls')
 
             ]                      
@@ -647,9 +647,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"Camila ᴍᴜꜱɪᴄ✯=#️⃣ Queued at position {position}")
+        await res.edit_text(f"Tɪᴛᴀɴ Mᴜꜱɪᴄ=#️⃣ Qᴜᴇᴜᴇᴅ ᴀᴛ Pᴏꜱɪᴛɪᴏɴ {position}")
     else:
-        await res.edit_text("Camila ᴍᴜꜱɪᴄ✯=▶️ Playing.....")
+        await res.edit_text("Tɪᴛᴀɴ Mᴜꜱɪᴄ=▶️ Pʟᴀʏɪɴɢ....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
@@ -666,7 +666,7 @@ async def deezer(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"Playing [{title}]({url}) Via Deezer"
+        caption=f"Pʟᴀʏɪɴɢ [{title}]({url}) Vɪᴀ Dᴇᴇᴢᴇʀ"
     ) 
     os.remove("final.png")
 
@@ -678,7 +678,7 @@ async def deezer(client: Client, message_: Message):
 )
 async def jiosaavn(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **Pʀᴏᴄᴇꜱꜱɪɴɢ**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -705,7 +705,7 @@ async def jiosaavn(client: Client, message_: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message_.chat.id,"I joined this group for playing music in VC")
                               await lel.edit(
-                                  "<b>camilaowner helper userbot joined your chat | Made by @Itsmelegend</b>",
+                                  "<b>@TITANVC_ASSISTANT helper userbot joined your chat | Made by @DARK_DEVIL_OP</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -714,7 +714,7 @@ async def jiosaavn(client: Client, message_: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @camilaowner to your Group and try again</b>",
+                                  "\n\nOr manually add @TITANVC_ASSISTANT to your Group and try again</b>",
                               )
                               pass
     try:
@@ -722,7 +722,7 @@ async def jiosaavn(client: Client, message_: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            "<i> @camilaowner helper Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually! For help contact us at @camila_Support</i>"
+            "<i> @TITANVC_ASSISTANT helper Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually! For help contact us at @camila_Support</i>"
         )
         return     
     requested_by = message_.from_user.first_name
@@ -730,7 +730,7 @@ async def jiosaavn(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     query = text[1]
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{query}` on jio saavn")
+    await res.edit(f"Sᴇᴀʀᴄʜɪɴɢ 👀 ꜰᴏʀ `{query}` ᴏɴ JIO Sᴀᴀᴠɴ ")
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(
@@ -752,17 +752,17 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
          [   
              [
-               InlineKeyboardButton('📖 Playlist', callback_data='playlist'),
-               InlineKeyboardButton('Menu ⏯ ', callback_data='menu')   
+               InlineKeyboardButton('Pʟᴀʏʟɪꜱᴛ 📖', callback_data='playlist'),
+               InlineKeyboardButton('Mᴇɴᴜ ⏯ ', callback_data='menu')   
              ],                     
              [
                InlineKeyboardButton(
-                   text="Updates Channel",
+                   text="Updates Channel 💠",
                    url='https://t.me/Yuki_Support')
              ],
              [       
                InlineKeyboardButton(
-                   text="❌ Close",
+                   text="Cʟᴏꜱᴇ ❌",
                    callback_data='cls')
 
             ]                          
@@ -782,12 +782,12 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"Camila ᴍᴜꜱɪᴄ✯=#️⃣ Queued at position {position} , Made by Itsmelegend",
+            caption=f"Tɪᴛᴀɴ Mᴜꜱɪᴄ=#️⃣ Qᴜᴇᴜᴇᴅ ᴀᴛ Pᴏꜱɪᴛɪᴏɴ {position} , Made by @DARK_DEVIL_OP",
         
         )           
            
     else:
-        await res.edit_text("Itsmelegend ᴍᴜꜱɪᴄ✯=▶️ Playing.....")
+        await res.edit_text("DARK_DEVIL_OP Mᴜꜱɪᴄ=▶️ Pʟᴀʏɪɴɢ.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
@@ -804,7 +804,7 @@ async def jiosaavn(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"Playing {sname} Via Jiosaavn",
+        caption=f"Pʟᴀʏɪɴɢ {sname} Vɪᴀ Jɪᴏꜱᴀᴀᴠɴ",
         
     )
     os.remove("final.png")
