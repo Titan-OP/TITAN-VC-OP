@@ -55,7 +55,7 @@ async def start_(client: Client, message: Message):
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "💁🏻‍♂️ Do you want to search for a YouTube video?",
+        "Heya! I am TITAN MUSIC BOT, I CAN PLAY MUSIC IN UR GROUP'S VC.",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
