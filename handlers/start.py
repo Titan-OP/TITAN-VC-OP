@@ -68,7 +68,7 @@ async def start(client: Client, message: Message):
                         "👑Cʀᴇᴀᴛᴏʀ👑", url="https://t.me/DARK_DEVIL_OP"
                     ),
                     InlineKeyboardButton(
-                        "Nᴏ ❌", callback_data="close"
+                        "💫Aʟꜱᴏ Cʜᴇᴄᴋ💫", url="https://t.me/Titan1v0_bot"
                     )
                 ]
             ]
