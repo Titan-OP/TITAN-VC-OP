@@ -20,25 +20,25 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "CamilaMusicbot"
+        user.first_name =  "TITANVC_ASSISTANT"
 
     try:
         await USER.join_chat(invitelink)
         await USER.send_message(message.chat.id,"I joined here as you requested")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>@camilaowner already in your chat</b>",
+            "<b>@TITANVC_ASSISTANT already in your chat</b>",
         )
         pass
     except Exception as e:
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add @camilaowner to your Group and try again</b>",
+            "\n\nOr manually add @TITANVC_ASSISTANT to your Group and try again</b>",
         )
         return
     await message.reply_text(
-            "<b>@camilaowner userbot joined your chat | Made by @itsmelegend</b>",
+            "<b>@TITANVC_ASSISTANT userbot joined your chat | Made by @DARK_DEVIL_OP</b>",
         )
     
 @USER.on_message(filters.group & filters.command(["userbotleave"]))
