@@ -9,6 +9,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
     & ~ filters.edited
 )
 async def start_(client: Client, message: Message):
+    await message.reply_sticker("")
     await message.reply_text(
         f"""<b>Hɪ {message.from_user.first_name}!
 \nɪ ᴀᴍ [𝐓𝐈𝐓𝐀𝐍 𝐕𝐂 𝐁𝐎𝐓](https://telegra.ph/file/9221dea55a8e847788d92.jpg)
@@ -54,7 +55,7 @@ async def start_(client: Client, message: Message):
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "ʜᴇʏᴀ! ɪ ᴀᴍ ᴛɪᴛᴀɴ ᴠᴄ ʙᴏᴛ, ɪ ᴄᴀɴ ᴘʟᴀʏ ꜱᴏɴɢ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴠᴄ."
+        "Heya! I am TITAN MUSIC BOT, I CAN PLAY MUSIC IN UR GROUP'S VC.",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
