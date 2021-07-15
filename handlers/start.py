@@ -54,7 +54,7 @@ async def start_(client: Client, message: Message):
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "Heya! I am TITAN MUSIC BOT, I CAN PLAY MUSIC IN UR GROUP'S VC.",
+        "Hᴇʏᴀ! ɪ ᴀᴍ 𝐓𝐈𝐓𝐀𝐍 𝐌𝐔𝐒𝐈𝐂 𝐁𝐎𝐓, ɪ ᴄᴀɴ ᴘʟᴀʏ ᴍᴜꜱɪᴄ ɪɴ ᴜʀ ɢʀᴏᴜᴘ'ꜱ ᴠᴄ.",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
